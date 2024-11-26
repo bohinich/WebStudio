@@ -40,11 +40,34 @@
                     </li>
                 </ul>
             </address>
+            <button class="burger-btn" type="button" data-menu-open>
+                <svg class="burger-icon" width="24" height="24">
+                    <use href="./images/icons.svg#svgicon-burger"></use>
+                </svg>
+            </button>
             </div>
+
+
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu-container">
+                    <button class="mobile-menu-close" data-menu-close>
+                        <svg width="8" height="8">
+                            <use href="./images/icons.svg#svgVector"></use>
+                        </svg>
+                    </button>
+
+                    <nav class="mobile-menu-nav">Navigation</nav>
+
+                    <address>Address</address>
+
+                    <div>Soc link</div>
+                </div>
+            </div>
+
     </header>
 
 
-    <main>
+    <!-- <main> 
         <section class="section-title">
             <div class="container">
                 <h1 class="title">Effective Solutions for Your Business</h1>
@@ -466,6 +489,9 @@
                 <button class="modal-window-form-button">Send</button>
             </form>
         </div>
-    </div>
+    </div>-->
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

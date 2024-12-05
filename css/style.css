@@ -498,3 +498,147 @@ span {
     background-color: #404BBF;
 }
 }
+
+
+
+/* section advantages */
+
+.section-advantages {
+    padding: 96px 0;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.list-advantages-info {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+}
+
+.list-item {
+    width: 288px;
+}
+
+.advantages-icons {
+    display: none;
+}
+
+.advantages {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.advantages-info {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+@media screen and (min-width: 768px) {
+.section-advantages {
+    padding: 96px 0;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.list-advantages-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.list-item {
+    width: 356px;
+}
+
+.advantages-icons {
+    display: none;
+}
+
+.advantages {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.advantages-info {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+} 
+}
+
+@media screen and (min-width: 1158px) {
+.section-advantages{
+    padding: 120px 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.list-advantages-info{
+    display: flex;
+    gap: 24px;
+}
+
+.list-item{
+    width: calc((100% - 72px)/4);
+}
+
+.advantages-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+}
+
+.advantages{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.advantages-info{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+}

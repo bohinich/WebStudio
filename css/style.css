@@ -633,7 +633,8 @@ span {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
 }
 
 .list-item {

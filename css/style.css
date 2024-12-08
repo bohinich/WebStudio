@@ -98,11 +98,13 @@ span {
 .burger-btn{
     padding: 0;
     border: none;
+    background-color: transparent;
 }
 
 .burger-icon{
     display: block;
     fill: #2F2F37;
+    background-color: opacity;
 }
 
 @media screen and (min-width: 768px) {
@@ -130,8 +132,12 @@ span {
     .nav:focus {
         color: #404bbf;
     }
+
+    .nav-studio{
+        color: #404bbf;
+    }
     
-    .nav::after {
+    .nav-studio::after {
         content: '';
         width: 100%;
         position: absolute;
@@ -163,6 +169,12 @@ span {
         align-items: center;
     }
 
+    .list-contacts{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     .contacts{
         display: block;
         font-size: 12px;
@@ -170,7 +182,6 @@ span {
         line-height: 1.17;
         letter-spacing: 0.04em;
         color: #434455;
-        margin: 12px 0;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -350,7 +361,7 @@ span {
 
 .section-title {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                      url(../images/bg-title.jpg);
+                      url(../images/mobile-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -400,7 +411,7 @@ span {
 @media screen and (min-width: 768px) {
 .section-title {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                      url(../images/bg-title.jpg);
+                      url(../images/Dark-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -470,6 +481,7 @@ span {
     max-width: 496px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 48px;
 }
 
 .button {
@@ -705,7 +717,7 @@ h2 {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    margin: 8px 0;
+    margin-bottom: 8px;
 }
 
 .team-members-icons {
@@ -1571,3 +1583,195 @@ h2{
     margin-left: 16px;
 }
 }
+
+
+
+/* modal-window */
+
+/*.container-modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    background: #fcfcfc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
+}
+
+.modal-window-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-button:hover {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+
+.modal-window-button:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+
+.modal-window-button-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    margin-bottom: 16px;
+}
+
+.modal-window-form-item {
+    margin-bottom: 8px;
+}
+
+.modal-window-form-item-name {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-window-form-input {
+    position: relative;
+}
+
+.modal-window-form-input-item {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-form-input-item:focus {
+    border-color: #4D5AE5;
+}
+
+.modal-window-form-input-item:focus+.modal-window-form-input-icon {
+    fill: #4D5AE5;
+}
+
+.modal-window-form-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-form-comment {
+    margin-bottom: 16px;
+}
+
+.modal-window-form-comment-item {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-form-comment-item:hover {
+    border-color: #4D5AE5;
+}
+
+.modal-window-form-comment-item:focus {
+    border-color: #4D5AE5;
+}
+
+.modal-window-form-checkbox {
+    margin-bottom: 24px;
+}
+
+.visually-hidden:checked+.modal-window-form-checkbox-label>.modal-window-form-span {
+    background-color: #404bbf;
+    fill: #F4F4FD;
+    border: none;
+}
+
+.modal-window-form-checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.modal-window-form-span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+.modal-window-form-checkbox-link {
+    color: #4d5ae5;
+}
+
+.modal-window-form-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}*/

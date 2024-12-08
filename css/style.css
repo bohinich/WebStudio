@@ -344,8 +344,8 @@ span {
 }
 
 .team-members-icons {
-    display: flex;
-    justify-content: flex-start;
+    display: block;
+    align-items: flex-start;
     gap: 40px;
 }
 

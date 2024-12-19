@@ -2024,6 +2024,12 @@ h2 {
     padding: 72px 16px 16px 16px;
 }
 
+.modal-window.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 .modal-window-button {
     position: absolute;
     top: 24px;
